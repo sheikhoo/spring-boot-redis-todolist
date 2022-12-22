@@ -1,0 +1,29 @@
+services:
+  db:
+    container_name: todolist-db
+    image: redis
+    networks:
+      - todolist-net
+    volumes:
+      - todolist-data:/data
+    ports:
+      - 6379:6379
+    expose:
+      - 6379
+
+  app:
+    build:
+      context: .
+    container_name: todolist-app
+    ports:
+      - 8080:8080
+    networks:
+      - todolist-net
+    depends_on:
+      - db
+
+volumes:
+  todolist-data:
+networks:
+  todolist-net:
+    name: todolist-net
