@@ -29,8 +29,13 @@ public class TaskController {
         return taskService.getById(id);
     }
 
-    @GetMapping("/checked/{id}")
+    @PutMapping("/checked/{id}")
     private Boolean checkedAndUnchecked(@PathVariable("id") String id){
         return taskService.checkedAndUnchecked(id);
+    }
+
+    @DeleteMapping("/del/{id}")
+    private void delete(@PathVariable("id") String id){
+        taskService.delete(id);
     }
 }

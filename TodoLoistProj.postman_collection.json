@@ -1,38 +1,10 @@
 {
 	"info": {
-		"_postman_id": "5e86b27d-3379-427a-ac0a-e195fa0d16af",
+		"_postman_id": "f62561ab-6f66-44db-80c4-39ad56fdcd62",
 		"name": "TodoLoistProj",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
-		{
-			"name": "new_task",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"firstName\":\"M.Sadegh\",\r\n    \"lastName\":\"Sheikh Zahedi\",\r\n    \"phone\":\"09135059909\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8090/new_user",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8090",
-					"path": [
-						"new_user"
-					]
-				}
-			},
-			"response": []
-		},
 		{
 			"name": "get_all",
 			"protocolProfileBehavior": {
@@ -97,12 +69,9 @@
 			"response": []
 		},
 		{
-			"name": "change_checkedAndUnchecked",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"name": "checked_unchecked",
 			"request": {
-				"method": "GET",
+				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
@@ -122,6 +91,82 @@
 					"port": "8080",
 					"path": [
 						"checked",
+						"d7e9a0c1-6797-473d-b29e-e49bc688eef9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"my task\",\r\n    \"description\":\"this is my task\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"d7e9a0c1-6797-473d-b29e-e49bc688eef9\",\r\n    \"title\":\"my task\",\r\n    \"description\":\"this is my task\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/del/d7e9a0c1-6797-473d-b29e-e49bc688eef9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"del",
 						"d7e9a0c1-6797-473d-b29e-e49bc688eef9"
 					]
 				}
