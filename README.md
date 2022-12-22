@@ -1,5 +1,6 @@
 # spring-boot-redis-todolist
 Simple todolist project with SpringBoot and Redis
+![todolist](todolist.png)
 
 ### Start the Application with the help of Docker
 Go to the project directory and execute the following command in the terminal
@@ -11,7 +12,7 @@ And we are done, the SpringBoot App will be starting on port 8080 and Redis is o
   - JDK 17
   - Redis
   
-### For just run redis using docker
+### For just run Redis using docker
   - `docker run -p 6379:6379 redis`
   
 ### Api
