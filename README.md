@@ -18,15 +18,15 @@ And we are done, the SpringBoot App will be starting on port 8080 and Redis is o
   
 ### Api
 - get list tasks
-`GET: http://localhost:8080/get_all`
+`GET: http://localhost:8080/tasks`
 - get task data
-`GET: http://localhost:8080/get/{id}`
+`GET: http://localhost:8080/task/{id}`
 - add new/update task
 `POST: http://localhost:8080/task`
 - delete one task
-`DELETE: http://localhost:8080/del/{id}`
+`DELETE: http://localhost:8080/task/{id}`
 - ckecked and unchecked task
-`PUT: http://localhost:8080/checked/{id}`
+`PUT: http://localhost:8080/task/checked/{id}`
 
 ### Dependencies And Tools Used To Build Application
   - Git

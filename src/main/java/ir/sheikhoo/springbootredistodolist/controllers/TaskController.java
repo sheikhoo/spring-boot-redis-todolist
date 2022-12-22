@@ -14,7 +14,7 @@ public class TaskController {
         this.taskService = taskService;
     }
 
-    @GetMapping("/get_all")
+    @GetMapping("/tasks")
     private List<TaskDto> getAll(){
         return taskService.listAll();
     }
@@ -24,17 +24,17 @@ public class TaskController {
         return taskService.saveOrUpdate(taskDto);
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/task/{id}")
     private TaskDto getById(@PathVariable("id") String id){
         return taskService.getById(id);
     }
 
-    @PutMapping("/checked/{id}")
+    @PutMapping("/task/checked/{id}")
     private Boolean checkedAndUnchecked(@PathVariable("id") String id){
         return taskService.checkedAndUnchecked(id);
     }
 
-    @DeleteMapping("/del/{id}")
+    @DeleteMapping("/task/{id}")
     private void delete(@PathVariable("id") String id){
         taskService.delete(id);
     }

@@ -23,14 +23,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/get_all",
+					"raw": "http://localhost:8080/tasks",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"get_all"
+						"tasks"
 					]
 				}
 			},
@@ -54,14 +54,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/get/d7e9a0c1-6797-473d-b29e-e49bc688eef9",
+					"raw": "http://localhost:8080/task/d7e9a0c1-6797-473d-b29e-e49bc688eef9",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"get",
+						"task",
 						"d7e9a0c1-6797-473d-b29e-e49bc688eef9"
 					]
 				}
@@ -83,13 +83,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/checked/d7e9a0c1-6797-473d-b29e-e49bc688eef9",
+					"raw": "http://localhost:8080/task/checked/d7e9a0c1-6797-473d-b29e-e49bc688eef9",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"task",
 						"checked",
 						"d7e9a0c1-6797-473d-b29e-e49bc688eef9"
 					]
@@ -159,14 +160,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/del/d7e9a0c1-6797-473d-b29e-e49bc688eef9",
+					"raw": "http://localhost:8080/task/d7e9a0c1-6797-473d-b29e-e49bc688eef9",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"del",
+						"task",
 						"d7e9a0c1-6797-473d-b29e-e49bc688eef9"
 					]
 				}
