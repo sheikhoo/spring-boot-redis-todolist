@@ -1,3 +1,4 @@
+import Nanigator from '@/components/Nanigator';
 import './globals.css';
 
 export default function RootLayout({
@@ -9,7 +10,7 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body className="text-black bg-white dark:text-white dark:bg-gray-800 transition-colors duration-300">
-        {children}
+        <Nanigator>{children}</Nanigator>
       </body>
     </html>
   );

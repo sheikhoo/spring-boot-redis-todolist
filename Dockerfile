@@ -1,9 +1,10 @@
-FROM maven:3.8.3-openjdk-17 AS builder
-ADD . /app
+FROM openjdk:17.0.1-jdk-slim AS builder
+COPY . /app
 WORKDIR /app
-RUN --mount=type=cache,target=/root/.m2 mvn -f /app/pom.xml clean package
-FROM openjdk:17.0.1-jdk-slim
+RUN ./mvnw clean package -DskipTests
 
-COPY --from=builder /app/target/spring-boot-redis-todolist-0.0.1.jar  todolist.jar
+FROM gcr.io/distroless/java17-debian11
+COPY --from=builder /app/target/*.jar  /app/app.jar
+WORKDIR /app
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","todolist.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
